@@ -1,0 +1,9 @@
+// Djan
+Switch AM_Deckenlicht               "Ammar  Deckenlicht"                         <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ0891674:7#STATE"}
+Switch WZ_Deckenlicht               "Wohnzimmer  Deckenlicht"                    <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ0891674:14#STATE"}
+Switch DJ_Deckenlicht               "Djan Deckenlicht"                           <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ1512592:13#STATE"}
+Switch SZ_Deckenlicht               "Schlafzimmer  Deckenlicht"                  <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ1512592:14#STATE"}
+Switch EZ_Deckenlicht               "Esszimmer  Deckenlicht"                      <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ1512592:15#STATE"}
+Switch KU_Deckenlicht               "Küche  Deckenlicht"                      	 <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ0891674:16#STATE"}
+Switch BZ_Deckenlicht               "Bad  Deckenlicht"                           <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ0891674:17#STATE"}
+Switch FL_Deckenlicht               "Flur  Deckenlicht"                          <light>     (BD,gLight)       {channel="homematic:HMW-IO-12-Sw7-DR:ccu:NEQ0891674:18#STATE"}

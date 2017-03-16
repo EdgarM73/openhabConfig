@@ -1,0 +1,15 @@
+Bridge homematic:bridge:ccu [ gatewayAddress="192.168.178.32", gatewayType="ccu", callbackHost="192.168.178.150", binCallbackPort=9126,xmlCallbackPort=9125 ]
+{
+  Thing homematic:GATEWAY-EXTRAS-ccu:ae9ae28c:GWE00000000 "Gateway Extras"
+  Thing homematic:HM-CC-RT-DN:ccu:LEQ0386190 "Heizung Schlafzimmer" 
+  Thing homematic:HM-RCV-50:ccu:BidCoS-RF "BidCos-RF" 
+  Thing homematic:HMW-RCV-50:ccu:BidCoS-Wir "BidCos-Wir" 
+  Thing homematic:HMW-IO-12-Sw7-DR:ccu:NEQ1512592 "Wired Module 1/92" 
+  Thing homematic:HMW-IO-12-Sw7-DR:ccu:NEQ0891674 "Wired Module 1/74" 
+  Thing homematic:HM-CC-RT-DN:ccu:LEQ0786552 "Heizung Ammar"
+  Thing homematic:HM-CC-RT-DN:ccu:MEQ1885954 "Heizung Djan"
+  Thing homematic:HM-CC-RT-DN:ccu:LEQ1067412 "Heizung Esszimmer"
+  Thing homematic:HM-CC-RT-DN:ccu:MEQ1583395 "Heizung Wohnzimmer"
+  Thing homematic:GATEWAY-EXTRAS-CCU:ccu:GWE00000000 "Gateway Extras"
+
+}

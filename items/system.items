@@ -1,0 +1,1 @@
+Switch      PresenceThPhone                 "Anwesenheit Himmel"                         <present>       (Whg) { channel="network:device:Himmel:online" }
