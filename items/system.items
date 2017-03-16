@@ -1,1 +1,53 @@
-Switch      PresenceThPhone                 "Anwesenheit Himmel"                         <present>       (Whg) { channel="network:device:Himmel:online" }
+
+// Hauptgruppe für Wohnung
+Group   Whg "Stadtschloß München"   <house>
+// Räume
+Group   BD  "Bad"               <bath>      (Whg)
+Group   FK  "Flur-Küche"        <kitchen>   (Whg)
+Group   SZ  "Schlafzimmer"      <bedroom>   (Whg)
+Group   WZ  "Wohnzimmer"        <video>     (Whg)
+Group   BK  "Balkon"            <garden>    (Whg)
+Group   AM  "Ammar"             <bedroom>   (Whg)
+Group   DJ  "Djan"              <bedroom>   (Whg)
+Group   EZ  "Esszimmer"         <kitchen>   (Whg)
+
+// horizontale Gruppen
+Group:Switch:OR(ON, OFF)        gLight      "Komplette Beleuchtung [%d ]"               <light>         (Whg)
+Group:Switch:OR(ON, OFF)        gBattery    "Batteriestände [%d ]"                      <battery>       (Whg)
+Group:Contact:OR(OPEN, CLOSED)  gWindow     "Offene Fenster [%d ]"                      <contact>       (Whg)
+Group:Number:SUM                gPower      "Aktueller Stromverbrauch [%.1f W]"         <energy>        (Whg)
+Group:Number:SUM                gEnergyCnt  "Energiezähler [%.1f Wh]"                   <energy>        (Whg)
+// Wartung / Maintenance
+Group                           gMaint      "Wartung (Maintenance)"                     <error>         (Whg)
+Group:Number:MIN                gRSSI       "RSSI aller Geräte [%d dBm]"                <line>          (gMaint)
+Group:Number:SUM                gUnreach    "Nicht erreichbare Geräte [%d]"             <siren>         (gMaint)
+Group:Number:SUM                gPending    "Geräte mit ausstehender Konfig. [%d]"      <siren>         (gMaint)
+Group:Number:SUM                gError      "Geräte mit Fehlerzustand [%d]"             <error2>        (gMaint)
+
+Switch      PresencePC                      "Zustand PC"                                <present>       (WZ)  { channel="network:device:BirkePC:online" }
+Switch      PresenceThPhone                 "Anwesenheit ThOP3"                         <present>       (Whg) { channel="network:device:ThOP3:online" }
+Switch      PresenceThN9                    "Anwesenheit ThN9"                          <present>       (Whg) { channel="network:device:ThN9:online" }
+
+Switch      WZ_BirkePC_Online               "BirkePC WinThing Online"                   <light>         (WZ)  { mqtt="<[broker:winthing-birke/system/system/online:state:MAP(truefalse.map)]" }
+String      WZ_BirkePC_Command              "BirkePC Command"                           <switch>        (WZ)
+
+Number      Whg_Light_Preset                "Wohnung Beleuchtung Schnellauswahl [%d]"   <switch>        (Whg)
+
+String      Whg_Heating_Mode                "Wohnung Heizmodus [%d]"                    <heating>       (Whg)
+Switch      Whg_Heating_UpdateHeater        "Sende Soll-Temperaturen an Heizkörper"     <heating>       (Whg)
+//Switch    Whg_Heating_UpdateOverride      "Verhindere Soll-Temperatur Änderungen"     <heating>       (Whg)
+
+Switch      BD_Deckenlicht_TimerActive      "Bad Deckenlicht Timer Active"                              (BD)
+DateTime    BD_Deckenlicht_TimerEnd         "Bad Deckenlicht Timer [%1$tH:%1$tM Uhr]"                   (BD)
+Number      BD_Deckenlicht_TimerDuration    "Bad Deckenlicht Timer Restzeit [%d min]"                   (BD)
+
+Switch      Wohnungstuer_TimerActive        "Wohnungstür Timer Active"                                  (Whg)
+DateTime    Wohnungstuer_TimerEnd           "Wohnungstür Timer [%1$tH:%1$tM Uhr]"                       (Whg)
+Number      Wohnungstuer_TimerDuration      "Wohnungstür Timer Restzeit [%d min]"                       (Whg)
+
+Switch      RuleWhgDoorNotif                "Wohnungstür Benachr."                                      (Whg)
+
+Number      BD_Waschmaschine_OpState        "Betriebszustand Waschmaschine [%d ]"       <washingmach>   (Whg)
+Number      FK_Spuelmaschine_OpState        "Betriebszustand Spülmaschine [%d ]"        <dishwasher>    (Whg)
+
+// vim: syntax=Xtend
