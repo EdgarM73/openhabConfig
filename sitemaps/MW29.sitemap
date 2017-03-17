@@ -165,22 +165,41 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
 
-		Text item=FK_Heizung_Battery label="Flur/Küche [%.1f V]" visibility=[FK_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
-		Text item=FK_Heizung_Fault label="Flur/Küche [MAP(HM-CC-RT-DN.map):%s]" visibility=[FK_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-        Text item=FK_Heizung_Summary label="Flur/Küche [%s]" {
+		Text item=AM_Heizung_Battery label="Ammar [%.1f V]" visibility=[AM_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
+		Text item=AM_Heizung_Fault label="Ammar [MAP(HM-CC-RT-DN.map):%s]" visibility=[AM_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
+        Text item=AM_Heizung_Summary label="Ammar [%s]" {
             Frame label="Temperatur" {
-                Text item=FK_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
+                Text item=AM_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
             }
             Frame label="Heizung" {
                 //Setpoint item=FK_Heizung_SetTemp label="Stellwert (±1) [%.1f °C]" minValue=4.5 maxValue=30.5 step=1.0
-                Setpoint item=FK_Heizung_SetTemp label="Stellwert (±½) [%.1f °C]" minValue=4.5 maxValue=30.5 step=0.5
-                Switch item=FK_Heizung_Preset label="Schnellwahl" mappings=[0="Spar", 1="Komfort"]
-                Text item=FK_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[FK_Heizung_BoostTime > 0]
-                Text item=FK_Heizung_Valve label="Ventilstellung [%d %%]"
-		Slider item=FK_Heizung_SetTemp label="Slide"
+                Setpoint item=AM_Heizung_SetTemp label="Stellwert (±½) [%.1f °C]" minValue=14.5 maxValue=30.5 step=0.5
+                Switch item=AM_Heizung_Preset label="Schnellwahl" mappings=[0="Spar", 1="Komfort"]
+                Text item=AM_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[AM_Heizung_BoostTime > 0]
+                Text item=AM_Heizung_Valve label="Ventilstellung [%d %%]"
+		Slider item=AM_Heizung_SetTemp label="Slide"
             }
+            
+            
         }
 
+		Text item=DJ_Heizung_Battery label="Djan [%.1f V]" visibility=[DJ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
+		Text item=DJ_Heizung_Fault label="Djan [MAP(HM-CC-RT-DN.map):%s]" visibility=[DJ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
+        Text item=DJ_Heizung_Summary label="Djan [%s]" {
+            Frame label="Temperatur" {
+                Text item=DJ_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
+            }
+            Frame label="Heizung" {
+                //Setpoint item=FK_Heizung_SetTemp label="Stellwert (±1) [%.1f °C]" minValue=4.5 maxValue=30.5 step=1.0
+                Setpoint item=DJ_Heizung_SetTemp label="Stellwert (±½) [%.1f °C]" minValue=14.5 maxValue=30.5 step=0.5
+                Switch item=DJ_Heizung_Preset label="Schnellwahl" mappings=[0="Spar", 1="Komfort"]
+                Text item=DJ_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[DJ_Heizung_BoostTime > 0]
+                Text item=DJ_Heizung_Valve label="Ventilstellung [%d %%]"
+		Slider item=DJ_Heizung_SetTemp label="Slide"
+            }
+            
+            
+        }
 		Text item=BD_Heizung_Battery label="Bad [%.1f V]" visibility=[BD_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
 		Text item=BD_Heizung_Fault label="Bad [MAP(HM-CC-RT-DN.map):%s]" visibility=[BD_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
         Text item=BD_Heizung_Summary label="Bad [%s]" {
