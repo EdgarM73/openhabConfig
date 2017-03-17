@@ -12,6 +12,8 @@ Group                           gHeatMode       "Raumtemperaturen Mode [%.1f °C
 Group:Number:AVG                gHeatPreset     "Raumtemperaturen Soll Zeitprogramm [%.1f °C]"  <line>          (gHeat)
 Group:NUMBER:SUM                gHeatWiMo       "Fensterabsenkung"                              <window>        (gHeat)
 
+
+// Ammar Heizung
 Number AM_Heizung_RSSI              "AM_Heizung RSSI [%d dBm]"                                  <"signal-3">    (gAMHeat,gRSSI)             { channel="homematic:HM-CC-RT-DN:ccu:LEQ0786552:0#RSSI_DEVICE" }
 Switch AM_Heizung_Unreach           "AM_Heizung unreachable"                                    <siren>         (gAMHeat,gUnreach)          { channel="homematic:HM-CC-RT-DN:ccu:LEQ0786552:0#UNREACH" }
 Switch AM_Heizung_Pending           "AM_Heizung config pending"                                 <siren>         (gAMHeat,gPending)          { channel="homematic:HM-CC-RT-DN:ccu:LEQ0786552:0#CONFIG_PENDING" }
@@ -30,6 +32,7 @@ Number AM_Heizung_Preset            "AM_Heizung Soll-Temperatur Schnellauswahl" 
 Number AM_Heizung_PresetTemp        "AM_Heizung Soll-Temperatur Zeitprogramm [%.1f °C]"         <line>          (gAMHeat,gHeatPreset)
 String AM_Heizung_Summary           "AM_Heizung Übersicht [%s]"                                 <temperature>   (gAMHeat,AM)
 
+// Wohnzimmer Heizung
 Number WZ_Heizung_RSSI              "WZ_Heizung RSSI [%d dBm]"                                  <"signal-3">    (gWZHeat,gRSSI)             { channel="homematic:HM-CC-RT-DN:ccu:MEQ1583395:0#RSSI_DEVICE" }
 Switch WZ_Heizung_Unreach           "WZ_Heizung unreachable"                                    <siren>         (gWZHeat,gUnreach)          { channel="homematic:HM-CC-RT-DN:ccu:MEQ1583395:0#UNREACH" }
 Switch WZ_Heizung_Pending           "WZ_Heizung config pending"                                 <siren>         (gWZHeat,gPending)          { channel="homematic:HM-CC-RT-DN:ccu:MEQ1583395:0#CONFIG_PENDING" }
@@ -48,7 +51,7 @@ Number WZ_Heizung_Preset            "WZ_Heizung Soll-Temperatur Schnellauswahl" 
 Number WZ_Heizung_PresetTemp        "WZ_Heizung Soll-Temperatur Zeitprogramm [%.1f °C]"         <line>          (gWZHeat,gHeatPreset)
 String WZ_Heizung_Summary           "WZ_Heizung Übersicht [%s]"                                 <temperature>   (gWZHeat,WZ)
 
-
+//Djan Heizung
 Number DJ_Heizung_RSSI              "DJ_Heizung RSSI [%d dBm]"                                  <"signal-3">    (gDJHeat,gRSSI)             { channel="homematic:HM-CC-RT-DN:ccu:MEQ1885954:0#RSSI_DEVICE" }
 Switch DJ_Heizung_Unreach           "DJ_Heizung unreachable"                                    <siren>         (gDJHeat,gUnreach)          { channel="homematic:HM-CC-RT-DN:ccu:MEQ1885954:0#UNREACH" }
 Switch DJ_Heizung_Pending           "DJ_Heizung config pending"                                 <siren>         (gDJHeat,gPending)          { channel="homematic:HM-CC-RT-DN:ccu:MEQ1885954:0#CONFIG_PENDING" }
@@ -67,6 +70,7 @@ Number DJ_Heizung_Preset            "DJ_Heizung Soll-Temperatur Schnellauswahl" 
 Number DJ_Heizung_PresetTemp        "DJ_Heizung Soll-Temperatur Zeitprogramm [%.1f °C]"         <line>          (gDJHeat,gHeatPreset)
 String DJ_Heizung_Summary           "DJ_Heizung Übersicht [%s]"                                 <temperature>   (gDJHeat,DJ)
 
+// Schlafzimmer Heizung
 Number SZ_Heizung_RSSI              "SZ_Heizung RSSI [%d dBm]"                                  <"signal-3">    (gSZHeat,gRSSI)             { channel="homematic:HM-CC-RT-DN:ccu:LEQ0386190:0#RSSI_DEVICE" }
 Switch SZ_Heizung_Unreach           "SZ_Heizung unreachable"                                    <siren>         (gSZHeat,gUnreach)          { channel="homematic:HM-CC-RT-DN:ccu:LEQ0386190:0#UNREACH" }
 Switch SZ_Heizung_Pending           "SZ_Heizung config pending"                                 <siren>         (gSZHeat,gPending)          { channel="homematic:HM-CC-RT-DN:ccu:LEQ0386190:0#CONFIG_PENDING" }
@@ -85,7 +89,7 @@ Number SZ_Heizung_Preset            "SZ_Heizung Soll-Temperatur Schnellauswahl" 
 Number SZ_Heizung_PresetTemp        "SZ_Heizung Soll-Temperatur Zeitprogramm [%.1f °C]"         <line>          (gSZHeat,gHeatPreset)
 String SZ_Heizung_Summary           "SZ_Heizung Übersicht [%s]"                                 <temperature>   (gSZHeat,SZ)
 
-
+// Essküche Heizung
 Number EK_Heizung_RSSI              "EK_Heizung RSSI [%d dBm]"                                  <"signal-3">    (gEKHeat,gRSSI)             { channel="homematic:HM-CC-RT-DN:ccu:LEQ1067412:0#RSSI_DEVICE" }
 Switch EK_Heizung_Unreach           "EK_Heizung unreachable"                                    <siren>         (gEKHeat,gUnreach)          { channel="homematic:HM-CC-RT-DN:ccu:LEQ1067412:0#UNREACH" }
 Switch EK_Heizung_Pending           "EK_Heizung config pending"                                 <siren>         (gEKHeat,gPending)          { channel="homematic:HM-CC-RT-DN:ccu:LEQ1067412:0#CONFIG_PENDING" }

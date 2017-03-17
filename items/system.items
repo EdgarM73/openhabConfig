@@ -3,13 +3,17 @@
 Group   Whg "Stadtschloß München"   <house>
 // Räume
 Group   BD  "Bad"               <bath>      (Whg)
-Group   FK  "Flur-Küche"        <kitchen>   (Whg)
+Group   GB  "Gäste WC"			<bath> 		(Whg)
+Group   KU	"Küche"				<kitchen>	(Whg)
+Group	EZ	"Esszimmer"			<kitchen>	(Whg)
+Group   FL  "Flur"        		<corridor>   (Whg)
 Group   SZ  "Schlafzimmer"      <bedroom>   (Whg)
 Group   WZ  "Wohnzimmer"        <video>     (Whg)
 Group   BK  "Balkon"            <garden>    (Whg)
 Group   AM  "Ammar"             <bedroom>   (Whg)
 Group   DJ  "Djan"              <bedroom>   (Whg)
-Group   EZ  "Esszimmer"         <kitchen>   (Whg)
+Group	EK	"Essküche"			<kitchen>	(Whg)
+
 
 // horizontale Gruppen
 Group:Switch:OR(ON, OFF)        gLight      "Komplette Beleuchtung [%d ]"               <light>         (Whg)
@@ -24,7 +28,7 @@ Group:Number:SUM                gUnreach    "Nicht erreichbare Geräte [%d]"    
 Group:Number:SUM                gPending    "Geräte mit ausstehender Konfig. [%d]"      <siren>         (gMaint)
 Group:Number:SUM                gError      "Geräte mit Fehlerzustand [%d]"             <error2>        (gMaint)
 
-Switch      PresencePC                      "Zustand PC"                                <present>       (WZ)  { channel="network:device:BirkePC:online" }
+Switch      PresencePC                      "Zustand Himmel"                            <present>       (WZ)  { channel="network:device:himmel:online" }
 Switch      PresenceThPhone                 "Anwesenheit ThOP3"                         <present>       (Whg) { channel="network:device:ThOP3:online" }
 Switch      PresenceThN9                    "Anwesenheit ThN9"                          <present>       (Whg) { channel="network:device:ThN9:online" }
 
@@ -45,9 +49,9 @@ Switch      Wohnungstuer_TimerActive        "Wohnungstür Timer Active"         
 DateTime    Wohnungstuer_TimerEnd           "Wohnungstür Timer [%1$tH:%1$tM Uhr]"                       (Whg)
 Number      Wohnungstuer_TimerDuration      "Wohnungstür Timer Restzeit [%d min]"                       (Whg)
 
-Switch      RuleWhgDoorNotif                "Wohnungstür Benachr."                                      (Whg)
+//Switch      RuleWhgDoorNotif                "Wohnungstür Benachr."                                      (Whg)
 
-Number      BD_Waschmaschine_OpState        "Betriebszustand Waschmaschine [%d ]"       <washingmach>   (Whg)
-Number      FK_Spuelmaschine_OpState        "Betriebszustand Spülmaschine [%d ]"        <dishwasher>    (Whg)
+//Number      BD_Waschmaschine_OpState        "Betriebszustand Waschmaschine [%d ]"       <washingmach>   (Whg)
+//Number      FK_Spuelmaschine_OpState        "Betriebszustand Spülmaschine [%d ]"        <dishwasher>    (Whg)
 
 // vim: syntax=Xtend
