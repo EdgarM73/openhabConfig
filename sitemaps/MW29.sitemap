@@ -110,6 +110,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
     }
+    
     Frame  item=gLight label="Beleuchtung [Aktiv: %d]" {
         //Switch item=Whg_Light_Preset icon="light" label="[]" mappings=[0="Aus", 1="Normal", 2="Relax", 3="Voll"]
         //Text item=gLight
@@ -134,8 +135,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
 
         Text item=EK_Heizung_Battery label="Esszimmer [%.1f V]" visibility=[EK_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"] //TODO MAP for 0..100
         Text item=EK_Heizung_Fault label="Esszimmer [MAP(HM-CC-RT-DN.map):%s]" visibility=[EK_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-        
-	Text item=EK_Heizung_Summary label="Esszimmer [%s]" {
+	    Text item=EK_Heizung_Summary label="Esszimmer [%s]" {
             Frame label="Temperatur" {
                 Text item=EK_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
             }
@@ -149,7 +149,9 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
         
-        Text item=WZ_Heizung_Summary label="Wohnzimmer [%s]" {
+        Text item=WZ_Heizung_Battery label="Wohnzimmer [%.1f V]" visibility=[WZ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"] //TODO MAP for 0..100
+        Text item=WZ_Heizung_Fault label="Wohnzimmer [MAP(HM-CC-RT-DN.map):%s]" visibility=[WZ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
+	    Text item=WZ_Heizung_Summary label="Wohnzimmer [%s]" {
             Frame label="Temperatur" {
                 Text item=WZ_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
             }
@@ -180,10 +182,9 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
         
-        //}
+        
 		Text item=AM_Heizung_Battery label="Ammar [%.1f V]" visibility=[AM_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
 		Text item=AM_Heizung_Fault label="Ammar [MAP(HM-CC-RT-DN.map):%s]" visibility=[AM_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-
         Text item=AM_Heizung_Summary label="Ammar [%s]" {
             Frame label="Temperatur" {
                 Text item=AM_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
@@ -195,10 +196,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
                 Switch item=AM_Heizung_BoostMode label="Boost (5min)" mappings=[ON="Starten"]
                 Text item=AM_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[SZ_Heizung_BoostTime > 0]
                 Text item=AM_Heizung_Valve label="Ventilstellung [%d %%]"
-            }
-
-            
-            
+            }   
         }
 
 		Text item=DJ_Heizung_Battery label="Djan [%.1f V]" visibility=[DJ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
@@ -221,7 +219,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
 
         
 		
-    }
+    
      
     
 /*
