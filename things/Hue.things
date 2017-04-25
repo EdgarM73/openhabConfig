@@ -1,5 +1,6 @@
 Bridge hue:bridge:0017882b8525 [ ipAddress="192.168.178.36", userName="MtBDTdfJCsLqRngarxXzuk67RW6OebmyoBECmPMg" ]
 {
-	0220 bulb1 [lightId="4"]
+	0210 Esszimmer [lightId="9"]
+	0210 Esszimmer1 [lightId="4"]
 }
 
