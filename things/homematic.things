@@ -10,6 +10,6 @@ Bridge homematic:bridge:ccu [ gatewayAddress="192.168.178.32", gatewayType="ccu"
   Thing homematic:HM-CC-RT-DN:ccu:MEQ1885954 "Heizung Djan"
   Thing homematic:HM-CC-RT-DN:ccu:LEQ1067412 "Heizung Esszimmer"
   Thing homematic:HM-CC-RT-DN:ccu:MEQ1583395 "Heizung Wohnzimmer"
+  Thing homematic:HM-CC-RT-DN:ccu:MEQ0182028 "Heizung Bad"
   Thing homematic:GATEWAY-EXTRAS-CCU:ccu:GWE00000000 "Gateway Extras"
-
 }
