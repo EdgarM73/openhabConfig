@@ -163,22 +163,6 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
 
-        Text item=SZ_Heizung_Battery label="Schlafzimmer [%.1f V]" visibility=[SZ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
-        Text item=SZ_Heizung_Fault label="Schlafzimmer [MAP(HM-CC-RT-DN.map):%s]" visibility=[SZ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-        Text item=SZ_Heizung_Summary label="Schlafzimmer [%s]" {
-            Frame label="Temperatur" {
-                Text item=SZ_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
-            }
-            Frame label="Heizung" {
-                Setpoint item=SZ_Heizung_SetTemp label="Stellwert (±1) [%.1f °C]" minValue=4.5 maxValue=30.5 step=1.0
-                Setpoint item=SZ_Heizung_SetTemp label="Stellwert (±½) [%.1f °C]" minValue=4.5 maxValue=30.5 step=0.5
-                Switch item=SZ_Heizung_Preset label="Schnellwahl" mappings=[0="Spar", 1="Komfort"]
-                Switch item=SZ_Heizung_BoostMode label="Boost (5min)" mappings=[ON="Starten"]
-                Text item=SZ_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[SZ_Heizung_BoostTime > 0]
-                Text item=SZ_Heizung_Valve label="Ventilstellung [%d %%]"
-            }
-        }
-
 
         Text item=SZ_Heizung_Battery label="Schlafzimmer [%.1f V]" visibility=[SZ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
         Text item=SZ_Heizung_Fault label="Schlafzimmer [MAP(HM-CC-RT-DN.map):%s]" visibility=[SZ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
@@ -196,8 +180,14 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
         
+<<<<<<< HEAD
          Text item=AM_Heizung_Battery label="Ammar [%.1f V]" visibility=[AM_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
         Text item=AM_Heizung_Fault label="Ammar [MAP(HM-CC-RT-DN.map):%s]" visibility=[AM_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
+=======
+        //}
+		Text item=AM_Heizung_Battery label="Ammar [%.1f V]" visibility=[AM_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
+		Text item=AM_Heizung_Fault label="Ammar [MAP(HM-CC-RT-DN.map):%s]" visibility=[AM_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
+>>>>>>> origin/master
         Text item=AM_Heizung_Summary label="Ammar [%s]" {
             Frame label="Temperatur" {
                 Text item=AM_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
@@ -210,11 +200,21 @@ sitemap MW29 label="MW29 openHAB Installation" {
                 Text item=AM_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[SZ_Heizung_BoostTime > 0]
                 Text item=AM_Heizung_Valve label="Ventilstellung [%d %%]"
             }
+<<<<<<< HEAD
          }
          
          Text item=DJ_Heizung_Battery label="Djan [%.1f V]" visibility=[DJ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
         Text item=DJ_Heizung_Fault label="Djan [MAP(HM-CC-RT-DN.map):%s]" visibility=[DJ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
         Text item=DJ_Heizung_Summary label="Djan [%s]" {
+=======
+            
+            
+        }
+
+		Text item=DJ_Heizung_Battery label="Djan [%.1f V]" visibility=[DJ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
+		Text item=DJ_Heizung_Fault label="Djan [MAP(HM-CC-RT-DN.map):%s]" visibility=[DJ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
+        Text item=DJ_Heizung_Summary label="Djan [%.1f]" {
+>>>>>>> origin/master
             Frame label="Temperatur" {
                 Text item=DJ_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
             }
@@ -232,7 +232,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
         }
 	/* 	Text item=BD_Heizung_Battery label="Bad [%.1f V]" visibility=[BD_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
 		Text item=BD_Heizung_Fault label="Bad [MAP(HM-CC-RT-DN.map):%s]" visibility=[BD_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-        Text item=BD_Heizung_Summary label="Bad [%s]" {
+        Text item=BD_Heizung_Summary label="Bad [%.1f]" {
             Frame label="Temperatur" {
                 Text item=BD_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
             }
@@ -247,8 +247,9 @@ sitemap MW29 label="MW29 openHAB Installation" {
         }
         Image label="Temperaturen" refresh=60000
               url="http://192.168.11.230:3000/render/dashboard-solo/db/w66a?panelId=4&width=700&height=350&from=now-48h&to=now"
+*/
     }
-     */
+     
     
 /*
     Frame label="Verbraucher" {
