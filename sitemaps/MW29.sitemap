@@ -195,10 +195,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
         Group item=Whg label="Alle Elemente" icon="house"
     }
 
-<<<<<<< HEAD
+
 }
-=======
 
-
->>>>>>> 16ada7c6edb72ca66e79e909e9cffb4d655cf25a
 // vim: syntax=Xtend
