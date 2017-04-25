@@ -180,14 +180,10 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
         
-<<<<<<< HEAD
-         Text item=AM_Heizung_Battery label="Ammar [%.1f V]" visibility=[AM_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
-        Text item=AM_Heizung_Fault label="Ammar [MAP(HM-CC-RT-DN.map):%s]" visibility=[AM_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-=======
         //}
 		Text item=AM_Heizung_Battery label="Ammar [%.1f V]" visibility=[AM_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
 		Text item=AM_Heizung_Fault label="Ammar [MAP(HM-CC-RT-DN.map):%s]" visibility=[AM_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
->>>>>>> origin/master
+
         Text item=AM_Heizung_Summary label="Ammar [%s]" {
             Frame label="Temperatur" {
                 Text item=AM_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
@@ -200,13 +196,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
                 Text item=AM_Heizung_BoostTime label="Boost-Restzeit [%d min]" visibility=[SZ_Heizung_BoostTime > 0]
                 Text item=AM_Heizung_Valve label="Ventilstellung [%d %%]"
             }
-<<<<<<< HEAD
-         }
-         
-         Text item=DJ_Heizung_Battery label="Djan [%.1f V]" visibility=[DJ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
-        Text item=DJ_Heizung_Fault label="Djan [MAP(HM-CC-RT-DN.map):%s]" visibility=[DJ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
-        Text item=DJ_Heizung_Summary label="Djan [%s]" {
-=======
+
             
             
         }
@@ -214,7 +204,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
 		Text item=DJ_Heizung_Battery label="Djan [%.1f V]" visibility=[DJ_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
 		Text item=DJ_Heizung_Fault label="Djan [MAP(HM-CC-RT-DN.map):%s]" visibility=[DJ_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
         Text item=DJ_Heizung_Summary label="Djan [%.1f]" {
->>>>>>> origin/master
+
             Frame label="Temperatur" {
                 Text item=DJ_Heizung_ActTemp label="Aktuelle Temperatur [%.1f °C]"
             }
