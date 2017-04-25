@@ -40,7 +40,8 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
         
-	Text item=SpeedtestSummary {
+        }    
+        Text item=SpeedtestSummary {
             Frame label="Ergebnisse" {
                 Text item=SpeedtestResultDown
                 Text item=SpeedtestResultUp
@@ -58,11 +59,8 @@ sitemap MW29 label="MW29 openHAB Installation" {
                       url="http://192.168.11.230:3000/render/dashboard-solo/db/w66a?panelId=5&width=700&height=350&from=now-48h&to=now"
             }
         }
-    }
- 
-    Frame  item=gLight label="Beleuchtung [Aktiv: %d]" {
-        //Switch item=Whg_Light_Preset icon="light" label="[]" mappings=[0="Aus", 1="Normal", 2="Relax", 3="Voll"]
-        //Text item=gLight
+    
+    Frame  item=gLight label="Beleuchtung [Aktiv: %d]" {      
         Switch item=AM_Deckenlicht
         Switch item=WZ_Deckenlicht
         Switch item=DJ_Deckenlicht
@@ -166,7 +164,6 @@ sitemap MW29 label="MW29 openHAB Installation" {
             
         }
 }
-    
     Frame label="Admin" {
         Text label="Optionen" icon="settings" {
             Switch item=RuleWhgDoorNotif
@@ -198,5 +195,10 @@ sitemap MW29 label="MW29 openHAB Installation" {
         Group item=Whg label="Alle Elemente" icon="house"
     }
 
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> 16ada7c6edb72ca66e79e909e9cffb4d655cf25a
 // vim: syntax=Xtend
