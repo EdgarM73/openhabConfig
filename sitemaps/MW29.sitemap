@@ -219,7 +219,8 @@ sitemap MW29 label="MW29 openHAB Installation" {
             
         }
 
-        }
+        
+		
 	/* 	Text item=BD_Heizung_Battery label="Bad [%.1f V]" visibility=[BD_Heizung_Battery < 2.2] valuecolor=[<2.2="maroon"]
 		Text item=BD_Heizung_Fault label="Bad [MAP(HM-CC-RT-DN.map):%s]" visibility=[BD_Heizung_Fault != NO_FAULT] valuecolor=[!=NO_FAULT="maroon"]
         Text item=BD_Heizung_Summary label="Bad [%.1f]" {
