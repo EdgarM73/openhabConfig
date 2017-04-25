@@ -40,7 +40,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
             }
         }
         
-        }    
+      
         Text item=SpeedtestSummary {
             Frame label="Ergebnisse" {
                 Text item=SpeedtestResultDown
@@ -59,7 +59,7 @@ sitemap MW29 label="MW29 openHAB Installation" {
                       url="http://192.168.11.230:3000/render/dashboard-solo/db/w66a?panelId=5&width=700&height=350&from=now-48h&to=now"
             }
         }
-    
+        }  
     Frame  item=gLight label="Beleuchtung [Aktiv: %d]" {      
         Switch item=AM_Deckenlicht
         Switch item=WZ_Deckenlicht
