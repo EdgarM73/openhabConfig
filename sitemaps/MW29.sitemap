@@ -219,22 +219,9 @@ sitemap MW29 label="MW29 openHAB Installation" {
             
         }
 
-        
-		
-    }
+    //}
      
     
-/*
-    Frame label="Verbraucher" {
-        Text item=FK_Spuelmaschine_OpState label="Spülmaschine [MAP(operation.map):%s]" valuecolor=[1="olive", 2="green", 3="maroon"]
-        Text item=BD_Waschmaschine_OpState label="Waschmaschine [MAP(operation.map):%s]" valuecolor=[1="olive", 2="green", 3="maroon"]
-        Text item=FK_Kuehlschrank_Power label="Kühlschrank [%.1f W]" icon="catfridge"
-        Image label="Verbraucher" refresh=60000
-              url="http://192.168.11.230:3000/render/dashboard-solo/db/w66a?panelId=3&width=700&height=350&from=now-48h&to=now"
-        Image label="Beleuchtung" refresh=60000
-              url="http://192.168.11.230:3000/render/dashboard-solo/db/w66a?panelId=2&width=700&height=350&from=now-48h&to=now"
-    }
-*/
     Frame label="Admin" {
         Text label="Optionen" icon="settings" {
             Switch item=RuleWhgDoorNotif
